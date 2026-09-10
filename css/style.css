@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #14213d;
+  color: #ffffff;
+  padding: 20px 40px;
+}
+
+.encabezado {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+}
+
+.marca {
+  font-size: 28px;
+}
+
+.marca a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.marca strong {
+  color: #fca311;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fca311;
+}
+
+.presentacion {
+  display: flex;
+  gap: 30px;
+  padding: 70px 0;
+}
+
+.presentacion-texto {
+  flex: 3;
+}
+
+.presentacion h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 10px 0 20px;
+}
+
+.presentacion-texto p {
+  margin: 0 0 24px;
+}
+
+.etiqueta {
+  color: #fca311;
+  font-weight: bold;
+}
+
+.boton-enlace {
+  background-color: #fca311;
+  border-radius: 6px;
+  color: #14213d;
+  display: block;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  width: 160px;
+}
+
+.boton-enlace:hover {
+  background-color: #ffffff;
+}
+
+.promocion {
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #14213d;
+  flex: 1;
+  padding: 24px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.seccion {
+  padding: 55px 0;
+}
+
+.seccion h2 {
+  color: #14213d;
+  font-size: 32px;
+  margin: 8px 0 18px;
+}
+
+.nosotros,
+.contacto {
+  display: flex;
+  gap: 40px;
+}
+
+.nosotros div,
+.contacto div,
+.contacto form {
+  flex: 1;
+}
+
+.nosotros p,
+.formulario-info p {
+  margin: 0 0 14px;
+}
+
+hr {
+  border: 1px solid #dddddd;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 700px;
+}
+
+.lista-planes {
+  display: flex;
+  gap: 20px;
+}
+
+.plan {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  flex: 1;
+  padding: 25px;
+}
+
+.plan h3 {
+  color: #14213d;
+  font-size: 23px;
+  margin: 8px 0;
+}
+
+.numero-plan,
+.recomendado {
+  color: #fca311;
+  font-weight: bold;
+}
+
+.precio {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.plan ul {
+  margin: 18px 0;
+  padding: 0 0 0 20px;
+}
+
+.plan a {
+  color: #14213d;
+  font-weight: bold;
+}
+
+.destacado {
+  border: 2px solid #fca311;
+}
+
+.franja {
+  background-color: #fca311;
+  color: #14213d;
+  display: flex;
+  gap: 60px;
+  padding: 24px;
+  text-align: center;
+}
+
+.franja p {
+  flex: 1;
+}
+
+table {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #9fb6c6;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #14213d;
+  color: #ffffff;
+}
+
+figure {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+
+img,
+video {
+  border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+}
+
+video {
+  display: block;
+  margin: 20px auto;
+}
+
+.multimedia figure img,
+.multimedia video {
+  display: block;
+  height: clamp(220px, 52vw, 450px);
+  max-width: 800px;
+  object-fit: cover;
+  width: 100%;
+}
+
+figcaption {
+  color: #555555;
+  margin: 8px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+fieldset {
+  background-color: #ffffff;
+  border: 1px solid #9fb6c6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+legend {
+  color: #14213d;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+label,
+.pregunta {
+  color: #14213d;
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #9fb6c6;
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #14213d;
+  outline: 2px solid #fca311;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: #c8102e;
+}
+
+.opciones,
+.aceptacion,
+.botones {
+  display: flex;
+  gap: 12px;
+}
+
+.opciones input,
+.aceptacion input {
+  width: auto;
+}
+
+.opciones label,
+.aceptacion label {
+  margin: 0;
+}
+
+button {
+  background-color: #14213d;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 12px 24px;
+}
+
+button:hover {
+  background-color: #fca311;
+  color: #14213d;
+}
+
+.boton-secundario {
+  background-color: #555555;
+}
+
+.nota {
+  color: #555555;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #14213d;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+footer a {
+  color: #fca311;
+}
