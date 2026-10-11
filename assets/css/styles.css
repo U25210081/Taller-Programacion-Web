@@ -1,0 +1,741 @@
+/* ========================================
+   1. VARIABLES CSS
+   ======================================== */
+/* Guarda los colores y la fuente que se repiten en el sitio. */
+:root {
+  --color-principal: #14213d;
+  --color-acento: #ffc409;
+  --color-fondo: #f4f4f4;
+  --color-blanco: #ffffff;
+  --color-texto: #222222;
+  --color-texto-suave: #555555;
+  --color-borde: #dddddd;
+  --fuente-principal: "Poppins", Arial, sans-serif;
+  --fuente-titulos: "Bebas Neue", Arial, sans-serif;
+}
+
+/* ========================================
+   2. RESET Y ESTILOS GENERALES
+   ======================================== */
+/* Elimina los espacios predeterminados de todos los elementos. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define la fuente, el tamaño y el color general de la página. */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Elimina el espacio inferior de imágenes, videos e iframe. */
+img,
+video,
+iframe {
+  display: block;
+}
+
+/* Ajusta imágenes y videos al ancho de su caja padre. */
+img,
+video {
+  height: auto;
+  width: 100%;
+}
+
+/* Mantiene una jerarquía uniforme en los títulos de sección. */
+h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Aplica la fuente deportiva a los títulos principales y secundarios. */
+h1,
+h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   3. COMPONENTES REUTILIZABLES
+   ======================================== */
+/* Limita el ancho del contenido y centra la caja. */
+.contenedor {
+  margin: auto;
+  max-width: 1100px;
+}
+
+/* Agrega espacio vertical entre las secciones. */
+.seccion {
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+/* Centra el título y la introducción de cada sección. */
+.titulo-seccion {
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Separa la introducción del contenido que aparece debajo. */
+.titulo-seccion p {
+  margin-bottom: 30px;
+}
+
+/* Identifica textos breves con el color de acento. */
+.etiqueta {
+  color: var(--color-acento);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Presenta un enlace con apariencia de botón. */
+.boton-enlace {
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+
+/* ========================================
+   4. BARRA SUPERIOR
+   ======================================== */
+/* Mantiene visibles los datos de contacto en la parte superior. */
+.barra-superior {
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+  font-size: 14px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Distribuye los datos de contacto con Flexbox. */
+.barra-superior-contenido {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+/* Da formato a los enlaces de teléfono y correo. */
+.barra-superior a {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+/* ========================================
+   5. CABECERA Y NAVEGACIÓN
+   ======================================== */
+/* Reserva espacio para las barras fijas y aplica el color principal. */
+header {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding-top: 110px;
+}
+
+/* Mantiene la marca y la navegación visibles durante el desplazamiento. */
+.encabezado {
+  align-items: center;
+  background-color: var(--color-principal);
+  box-shadow: 0 0 3px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  padding: 20px 40px;
+  position: fixed;
+  right: 0;
+  top: 37px;
+  z-index: 1000;
+}
+
+/* Destaca el nombre del gimnasio. */
+.marca {
+  font-family: var(--fuente-titulos);
+  font-size: 34px;
+  font-weight: 400;
+}
+
+/* Da formato al enlace que funciona como logotipo. */
+.marca a {
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+/* Aplica el color de acento a una parte de la marca. */
+.marca strong {
+  color: var(--color-acento);
+}
+
+/* Organiza los enlaces del menú en una fila. */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Convierte cada enlace del menú en una caja. */
+.nav-menu a {
+  color: var(--color-blanco);
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+
+/* ========================================
+   6. PRESENTACIÓN
+   ======================================== */
+/* Sirve como referencia para colocar el texto sobre la imagen. */
+.presentacion {
+  position: relative;
+}
+
+/* Coloca el texto y la promoción sobre la fotografía principal. */
+.presentacion-contenido {
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: var(--color-blanco);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  left: 40px;
+  padding: 25px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+/* Da mayor ancho al mensaje principal. */
+.presentacion-texto {
+  flex: 2;
+}
+
+/* Destaca el título principal de la página. */
+.presentacion h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+/* Presenta la promoción en una caja clara. */
+.promocion {
+  background-color: var(--color-blanco);
+  color: var(--color-principal);
+  flex: 1;
+  padding: 25px;
+}
+
+/* ========================================
+   7. CONTENIDO PRINCIPAL Y NOSOTROS
+   ======================================== */
+/* Limita el ancho del contenido principal y lo centra. */
+main {
+  margin: auto;
+  max-width: 1100px;
+}
+
+/* Organiza la presentación del gimnasio en dos columnas. */
+.nosotros {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+/* Da mayor ancho al título que al texto descriptivo. */
+.nosotros-col1 {
+  flex: 2;
+}
+
+/* Define el ancho de la segunda columna. */
+.nosotros-col2 {
+  flex: 1;
+}
+
+/* Separa los párrafos de la presentación. */
+.nosotros p {
+  margin-bottom: 15px;
+}
+
+/* ========================================
+   8. PLANES Y TARJETAS
+   ======================================== */
+/* Distribuye las tarjetas de planes en una fila. */
+.lista-planes {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Define la apariencia de cada tarjeta. */
+.plan {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  flex: 1;
+  padding: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Da formato a los nombres de los planes. */
+.plan h3 {
+  color: var(--color-principal);
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Explica brevemente para qué tipo de usuario se recomienda cada plan. */
+.descripcion-plan {
+  color: var(--color-texto-suave);
+  margin-bottom: 15px;
+}
+
+/* Resalta el número y la recomendación de un plan. */
+.numero-plan,
+.recomendado {
+  color: var(--color-acento);
+  font-weight: 600;
+}
+
+/* Separa el precio y la lista de beneficios. */
+.precio,
+.plan-beneficios {
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+/* Aumenta el tamaño del precio para facilitar la comparación. */
+.precio strong {
+  font-size: 24px;
+}
+
+/* Separa los beneficios y destaca sus iconos. */
+.plan-beneficios p {
+  margin-bottom: 10px;
+}
+
+.plan-beneficios i {
+  color: var(--color-acento);
+}
+
+/* Separa la condición principal del botón de selección. */
+.condicion-plan {
+  border-top: 1px solid var(--color-borde);
+  font-size: 12px;
+  padding-top: 12px;
+}
+
+/* Presenta el enlace para seleccionar un plan como botón. */
+.plan a {
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Destaca el plan más elegido con fondo oscuro y borde de acento. */
+.destacado {
+  background-color: var(--color-principal);
+  border: 1px solid var(--color-acento);
+  color: var(--color-blanco);
+}
+
+/* Mantiene legible el título del plan destacado. */
+.destacado h3 {
+  color: var(--color-blanco);
+}
+
+/* Mantiene legibles la descripción y la condición del plan destacado. */
+.destacado .descripcion-plan,
+.destacado .condicion-plan {
+  color: var(--color-blanco);
+}
+
+/* ========================================
+   9. TABLA DE HORARIOS
+   ======================================== */
+/* Une los bordes y utiliza todo el ancho disponible. */
+table {
+  background-color: var(--color-blanco);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Aplica borde y espacio a las celdas. */
+th,
+td {
+  border: 1px solid var(--color-borde);
+  padding: 15px;
+}
+
+/* Diferencia la cabecera de la tabla. */
+thead {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-transform: uppercase;
+}
+
+/* Centra los horarios para facilitar la lectura de la tabla. */
+tbody td:nth-child(2),
+tbody td:nth-child(3) {
+  text-align: center;
+}
+
+/* ========================================
+   10. GALERÍA FLEXBOX
+   ======================================== */
+/* Utiliza todas las propiedades Flexbox solicitadas en el PDF. */
+.galeria-flex {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Define la apariencia y el ancho normal de las fotografías. */
+.galeria-item {
+  flex: 1;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Redondea las fotografías para darles una apariencia deportiva actual. */
+.galeria-item img {
+  border-radius: 20px;
+}
+
+/* Presenta el nombre de cada espacio como un título deportivo. */
+.galeria-item figcaption {
+  color: var(--color-texto-suave);
+  padding-top: 12px;
+  text-align: left;
+}
+
+/* Da fuerza visual al nombre de cada espacio. */
+.galeria-item figcaption h3 {
+  font-family: var(--fuente-titulos);
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+/* Separa la descripción breve del nombre del espacio. */
+.galeria-item figcaption p {
+  font-family: var(--fuente-principal);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Alinea a la izquierda la presentación de la galería. */
+#galeria .titulo-seccion {
+  max-width: 100%;
+  text-align: left;
+}
+
+/* ========================================
+   11. MULTIMEDIA
+   ======================================== */
+/* Distribuye el video local y YouTube en dos columnas. */
+.multimedia-flex {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* Da el mismo ancho a los dos contenidos multimedia. */
+.multimedia-flex article {
+  flex: 1;
+}
+
+/* Da formato a los títulos de los videos. */
+.multimedia-flex h3 {
+  color: var(--color-principal);
+  margin-bottom: 15px;
+}
+
+/* Mantiene la proporción panorámica de los videos. */
+.multimedia video,
+.multimedia iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+}
+
+/* ========================================
+   12. CONTACTO Y FORMULARIO
+   ======================================== */
+/* Organiza la información y el formulario en dos columnas. */
+.contacto {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+/* Da el mismo ancho a las dos columnas de contacto. */
+.formulario-info,
+.contacto form {
+  flex: 1;
+}
+
+/* Separa los datos de contacto. */
+.formulario-info p {
+  margin-bottom: 14px;
+}
+
+/* Agrupa visualmente los campos relacionados. */
+fieldset {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Coloca dos campos relacionados en una fila usando Flexbox. */
+.fila-campos {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Reparte por igual el espacio disponible entre los campos. */
+.campo {
+  flex: 1;
+}
+
+/* Identifica cada grupo del formulario. */
+legend {
+  color: var(--color-principal);
+  font-weight: 600;
+  padding: 8px;
+}
+
+/* Ordena las etiquetas del formulario. */
+label,
+.pregunta {
+  color: var(--color-principal);
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Da formato uniforme a los campos de entrada. */
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-borde);
+  font: inherit;
+  outline: none;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+/* Coloca radios y casillas junto a sus etiquetas. */
+.opciones,
+.aceptacion,
+.botones {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* Conserva el ancho natural de radios y casillas. */
+.opciones input,
+.aceptacion input {
+  width: auto;
+}
+
+/* Elimina el espacio superior de las etiquetas laterales. */
+.opciones label,
+.aceptacion label {
+  margin-top: 0;
+}
+
+/* Define la apariencia de los botones del formulario. */
+button {
+  background-color: var(--color-principal);
+  border: none;
+  color: var(--color-blanco);
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Diferencia el botón utilizado para limpiar. */
+.boton-secundario {
+  background-color: var(--color-texto-suave);
+}
+
+/* Presenta la aclaración académica con menor tamaño. */
+.nota {
+  color: var(--color-texto-suave);
+  font-size: 12px;
+}
+
+/* Conserva el color del bloque en los enlaces de contacto. */
+.formulario-info a {
+  color: var(--color-principal);
+}
+
+/* ========================================
+   13. PIE DE PÁGINA
+   ======================================== */
+/* Mantiene la identidad visual en el pie de página. */
+footer {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Distribuye los enlaces importantes del pie. */
+.footer-enlaces {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Organiza marca, enlaces y contacto en tres columnas. */
+.footer-contenido {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Da el mismo ancho a la marca, el menú y los datos de contacto. */
+.footer-marca,
+.footer-enlaces,
+.footer-contacto {
+  flex: 1;
+}
+
+/* Alinea los textos laterales del pie de página. */
+.footer-marca {
+  text-align: left;
+}
+
+.footer-contacto {
+  text-align: right;
+}
+
+/* Separa ligeramente los datos de contacto y el horario. */
+.footer-contacto p {
+  margin-bottom: 5px;
+}
+
+/* Destaca el nombre del gimnasio en el pie. */
+.footer-marca h3 {
+  color: var(--color-acento);
+  font-size: 28px;
+}
+
+/* Da formato a los enlaces del pie. */
+footer a {
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+/* ========================================
+   14. BOTÓN PARA VOLVER AL INICIO
+   ======================================== */
+/* Fija el botón en la esquina inferior derecha. */
+.scroll-up {
+  align-items: center;
+  background-color: var(--color-acento);
+  bottom: 25px;
+  color: var(--color-principal);
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  position: fixed;
+  right: 25px;
+  text-decoration: none;
+  width: 45px;
+}
+
+/* ========================================
+   15. EFECTOS HOVER
+   ======================================== */
+/* Cambia los colores de los enlaces del menú. */
+.nav-menu a:hover {
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+}
+
+/* Cambia el fondo de los enlaces que funcionan como botones. */
+.boton-enlace:hover,
+.plan a:hover {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+}
+
+/* Destaca las tarjetas sin utilizar transformaciones. */
+.plan:hover {
+  box-shadow: 0 0 3px rgb(0, 0, 0, 0.2);
+}
+
+/* Destaca cada espacio de la galería al pasar el cursor. */
+.galeria-item:hover {
+  background-color: var(--color-blanco);
+  box-shadow: 0 0 3px rgb(0, 0, 0, 0.2);
+}
+
+/* Agrega una sombra a las imágenes de la galería. */
+.galeria-item img:hover {
+  box-shadow: 0 0 3px rgb(0, 0, 0, 0.2);
+}
+
+/* Cambia el color de los botones del formulario. */
+button:hover {
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+}
+
+/* Cambia el color de los enlaces de contacto y del pie. */
+.barra-superior a:hover,
+.formulario-info a:hover,
+footer a:hover {
+  color: var(--color-acento);
+}

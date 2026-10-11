@@ -5,58 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mi GymPro: planes de entrenamiento y formulario de inscripción.">
   <title>Mi GymPro</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Enlazar HTML con la fuente Poppins de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Enlazar el HTML con la librería de iconos de fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Enlaza la página con el favicon solicitado para la entrega. -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- ===== BARRA SUPERIOR: datos de contacto rápido ===== -->
+  <div class="barra-superior">
+    <div class="contenedor barra-superior-contenido">
+      <a href="tel:+51987654321"><i class="fa-solid fa-phone"></i> 987 654 321</a>
+      <a href="mailto:contacto@migympro.pe"><i class="fa-solid fa-envelope"></i> contacto@migympro.pe</a>
+      <span><i class="fa-solid fa-location-dot"></i> Av. Principal 245, Lima</span>
+    </div>
+  </div>
+  <!-- ===== FIN BARRA SUPERIOR ===== -->
+
+  <!-- ===== CABECERA: marca y navegación principal ===== -->
   <header id="inicio">
     <div class="encabezado">
-      <h1 class="marca">
-        <a href="#inicio">MI <strong>GYMPRO</strong></a>
-      </h1>
+      <p class="marca">
+        <a href="index.html" title="Ir al inicio">MI <strong>GYMPRO</strong></a>
+      </p>
 
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#planes">Planes</a></li>
-          <li><a href="#horarios">Horarios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+      <!-- Menú con enlaces internos hacia las secciones de la página -->
+      <nav class="nav-menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#planes">Planes</a>
+        <a href="#galeria">Galería</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
 
+    <!-- ===== HERO: mensaje principal y promoción ===== -->
     <section class="presentacion">
-      <div class="presentacion-texto">
-        <p class="etiqueta">ENTRENA A TU RITMO</p>
-        <h2>Construye una versión más fuerte de ti</h2>
-        <p>Conoce nuestros planes, elige el horario que prefieras y solicita tu inscripción.</p>
-        <a class="boton-enlace" href="#planes">Ver planes</a>
-      </div>
+      <!-- Imagen principal incluida en HTML para describirla mediante el atributo alt -->
+      <img src="assets/img/clase-spinning-hero.jpg"
+        alt="Personas entrenando en bicicletas estáticas dentro del gimnasio">
 
-      <aside class="promocion">
-        <p>Promoción del mes</p>
-        <h2>Primera evaluación gratis</h2>
-        <p>Disponible al elegir cualquier plan mensual.</p>
-      </aside>
+      <!-- Capa que organiza el texto y mantiene su contraste sobre la fotografía -->
+      <div class="presentacion-contenido">
+        <div class="presentacion-texto">
+          <p class="etiqueta">ENTRENA SIN LÍMITES</p>
+          <h1>Supera tus objetivos</h1>
+          <p>Planes flexibles, equipos modernos y orientación para entrenar a tu ritmo.</p>
+          <a class="boton-enlace" href="#planes">Ver planes</a>
+        </div>
+
+        <aside class="promocion">
+          <p>Promoción del mes</p>
+          <h3>Primera evaluación gratis</h3>
+          <p>Disponible al elegir cualquier plan mensual.</p>
+        </aside>
+      </div>
     </section>
+    <!-- ===== FIN HERO ===== -->
   </header>
+  <!-- ===== FIN CABECERA ===== -->
 
   <main>
+    <!-- ===== NOSOTROS: presentación del gimnasio ===== -->
     <section id="nosotros" class="seccion nosotros">
-      <div>
+      <div class="nosotros-col1">
         <p class="etiqueta">SOBRE NOSOTROS</p>
         <h2>Un espacio para alcanzar tus objetivos</h2>
-      </div>
-
-      <div>
         <p>Mi GymPro es un gimnasio orientado al bienestar y al entrenamiento responsable. Contamos con máquinas, clases grupales y entrenadores preparados para acompañar a nuestros clientes.</p>
         <p><strong>Misión:</strong> ofrecer un espacio seguro y accesible para mejorar la salud física.</p>
         <p><strong>Visión:</strong> ser un gimnasio reconocido por la buena atención y el acompañamiento constante.</p>
       </div>
+
+      <div class="nosotros-col2">
+        <img src="assets/img/zona-pesas.png" alt="Zona de pesas de Mi GymPro" loading="lazy">
+      </div>
     </section>
+    <!-- ===== FIN NOSOTROS ===== -->
 
     <hr>
 
+    <!-- ===== PLANES: membresías disponibles ===== -->
     <section id="planes" class="seccion">
       <div class="titulo-seccion">
         <p class="etiqueta">MEMBRESÍAS</p>
@@ -68,12 +108,15 @@
         <article class="plan">
           <p class="numero-plan">01</p>
           <h3>Plan Básico</h3>
+          <p class="descripcion-plan">Ideal para comenzar a entrenar con los equipos esenciales.</p>
           <p class="precio"><strong>S/ 60</strong> al mes</p>
-          <ul>
-            <li>Acceso a máquinas</li>
-            <li>Uso de vestidores</li>
-            <li>Horario de 9:00 a. m. a 5:00 p. m.</li>
-          </ul>
+          <div class="plan-beneficios">
+            <p><i class="fa-solid fa-dumbbell"></i> Máquinas y zona de pesas</p>
+            <p><i class="fa-solid fa-check"></i> Uso de vestidores</p>
+            <p><i class="fa-solid fa-clock"></i> Horario de 9:00 a. m. a 5:00 p. m.</p>
+            <p><i class="fa-solid fa-person-running"></i> Orientación durante la primera visita</p>
+          </div>
+          <p class="condicion-plan">Acceso a una sede.</p>
           <a href="#contacto">Seleccionar plan</a>
         </article>
 
@@ -81,64 +124,107 @@
           <p class="numero-plan">02</p>
           <p class="recomendado">MÁS ELEGIDO</p>
           <h3>Plan Estándar</h3>
+          <p class="descripcion-plan">Una opción completa para entrenar con mayor variedad.</p>
           <p class="precio"><strong>S/ 100</strong> al mes</p>
-          <ul>
-            <li>Acceso a máquinas</li>
-            <li>Clases grupales</li>
-            <li>Evaluación física mensual</li>
-          </ul>
+          <div class="plan-beneficios">
+            <p><i class="fa-solid fa-dumbbell"></i> Acceso a todas las zonas</p>
+            <p><i class="fa-solid fa-people-group"></i> Clases grupales con instructor</p>
+            <p><i class="fa-solid fa-heart-pulse"></i> Evaluación física mensual</p>
+            <p><i class="fa-solid fa-person-running"></i> Rutina básica de entrenamiento</p>
+          </div>
+          <p class="condicion-plan">Acceso en todo el horario de atención.</p>
           <a href="#contacto">Seleccionar plan</a>
         </article>
 
         <article class="plan">
           <p class="numero-plan">03</p>
           <h3>Plan Premium</h3>
+          <p class="descripcion-plan">Mayor acompañamiento para avanzar hacia objetivos específicos.</p>
           <p class="precio"><strong>S/ 160</strong> al mes</p>
-          <ul>
-            <li>Acceso sin límite de horario</li>
-            <li>Clases grupales</li>
-            <li>Entrenador personal</li>
-          </ul>
+          <div class="plan-beneficios">
+            <p><i class="fa-solid fa-clock"></i> Acceso en todo el horario</p>
+            <p><i class="fa-solid fa-people-group"></i> Clases grupales con instructor</p>
+            <p><i class="fa-solid fa-person-running"></i> Rutina de entrenamiento personalizada</p>
+            <p><i class="fa-solid fa-heart-pulse"></i> Seguimiento físico mensual</p>
+          </div>
+          <p class="condicion-plan">Incluye una orientación personal al mes.</p>
           <a href="#contacto">Seleccionar plan</a>
         </article>
       </div>
     </section>
+    <!-- ===== FIN PLANES ===== -->
 
-    <div class="franja">
-      <p><strong>Lunes a sábado</strong><br>6:00 a. m. - 10:00 p. m.</p>
-      <p><strong>Ubicación</strong><br>Av. Principal 245, Lima</p>
-      <p><strong>Atención</strong><br>987 654 321</p>
-    </div>
-
-    <section id="horarios" class="seccion horarios">
+    <!-- ===== HORARIOS: tabla informativa ===== -->
+    <section id="horarios" class="seccion">
       <div class="titulo-seccion">
         <p class="etiqueta">HORARIOS</p>
         <h2>Organiza tu entrenamiento</h2>
         <p>Consulta nuestros horarios de atención y elige el momento que mejor se adapte a tu rutina.</p>
       </div>
 
+      <!-- Tabla semántica con cabecera y cuerpo de horarios -->
       <table>
-        <tr>
-          <th>Días</th>
-          <th>Apertura</th>
-          <th>Cierre</th>
-          <th>Servicios disponibles</th>
-        </tr>
-        <tr>
-          <td>Lunes a viernes</td>
-          <td>6:00 a. m.</td>
-          <td>10:00 p. m.</td>
-          <td>Máquinas, clases grupales y entrenador personal</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>7:00 a. m.</td>
-          <td>8:00 p. m.</td>
-          <td>Máquinas y clases grupales</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Días</th>
+            <th>Apertura</th>
+            <th>Cierre</th>
+            <th>Servicios disponibles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes a viernes</td>
+            <td>6:00 a. m.</td>
+            <td>10:00 p. m.</td>
+            <td>Máquinas, clases grupales y entrenador personal</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>7:00 a. m.</td>
+            <td>8:00 p. m.</td>
+            <td>Máquinas y clases grupales</td>
+          </tr>
+        </tbody>
       </table>
     </section>
+    <!-- ===== FIN HORARIOS ===== -->
 
+    <!-- ===== GALERÍA: espacios organizados con Flexbox ===== -->
+    <section id="galeria" class="seccion">
+      <div class="titulo-seccion">
+        <p class="etiqueta">NUESTROS ESPACIOS</p>
+        <h2>Entrena en un ambiente preparado para ti</h2>
+        <p>Conoce algunas de las zonas que encontrarás en Mi GymPro.</p>
+      </div>
+
+      <div class="galeria-flex">
+        <figure class="galeria-item">
+          <img src="assets/img/zona-musculacion.jpg" alt="Zona de musculación con máquinas y pesas" loading="lazy">
+          <figcaption>
+            <h3>Zona de fuerza</h3>
+            <p>Pesas y equipos para desarrollar fuerza y resistencia.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="assets/img/maquinas-cardio.png" alt="Zona de cardio con máquinas de entrenamiento" loading="lazy">
+          <figcaption>
+            <h3>Zona de máquinas</h3>
+            <p>Equipos de cardio para mejorar tu condición física.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="assets/img/zona-cross-training.png" alt="Espacio equipado para cross training" loading="lazy">
+          <figcaption>
+            <h3>Entrenamiento funcional</h3>
+            <p>Un espacio dinámico para trabajar todo el cuerpo.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- ===== FIN GALERÍA ===== -->
+
+    <!-- ===== MULTIMEDIA: video local y video de YouTube ===== -->
     <section id="multimedia" class="seccion multimedia">
       <div class="titulo-seccion">
         <p class="etiqueta">INSTALACIONES</p>
@@ -146,45 +232,72 @@
         <p>Observa nuestros espacios y conoce el ambiente donde podrás entrenar.</p>
       </div>
 
-      <figure>
-        <img src="img/migympro.png" alt="Zona de entrenamiento con máquinas y pesas de Mi GymPro" loading="lazy">
-        <figcaption>Entrena en un ambiente cómodo y seguro.</figcaption>
-      </figure>
-
-      <video controls poster="img/gimnasio-fitlife.png">
-        <source src="video/migympro.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-      </video>
+      <div class="multimedia-flex">
+        <article>
+          <h3>Recorrido por nuestras instalaciones</h3>
+          <!-- Video MP4 almacenado dentro del proyecto -->
+          <video controls preload="metadata">
+            <source src="assets/videos/migympro.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+        </article>
+        <article>
+          <h3>Rutina para tu primer día</h3>
+          <!-- Video externo insertado mediante iframe -->
+          <iframe src="https://www.youtube.com/embed/O8rUY1p-Y5o"
+            title="Rutina de ejercicios para empezar en el gimnasio"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+      </div>
     </section>
+    <!-- ===== FIN MULTIMEDIA ===== -->
 
+    <!-- ===== CONTACTO: información y solicitud de inscripción ===== -->
     <section id="contacto" class="seccion contacto">
       <div class="formulario-info">
         <p class="etiqueta">CONTACTO E INSCRIPCIÓN</p>
         <h2>Comienza tu entrenamiento</h2>
         <p>Completa el formulario para solicitar tu inscripción. Nos comunicaremos contigo para confirmar la disponibilidad.</p>
         <p><strong>Dirección:</strong><br>Av. Principal 245, Lima, Perú</p>
-        <p><strong>Teléfono:</strong><br>987 654 321</p>
-        <p><strong>Correo:</strong><br>contacto@migympro.pe</p>
+        <p><strong>Teléfono:</strong><br><a href="tel:+51987654321">987 654 321</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@migympro.pe">contacto@migympro.pe</a></p>
       </div>
 
-      <form action="#" method="post">
+      <!-- Formulario con validaciones nativas de HTML5 -->
+      <form method="post">
         <fieldset>
           <legend>Datos personales</legend>
 
-          <label for="nombre">Nombres y apellidos</label>
-          <input type="text" id="nombre" name="nombre" minlength="3" placeholder="Ejemplo: Carlos Pérez" required>
+          <!-- La fila agrupa dos campos sencillos mediante Flexbox. -->
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="nombre">Nombres y apellidos</label>
+              <input type="text" id="nombre" name="nombre" minlength="3" placeholder="Ejemplo: Carlos Pérez" autocomplete="name" required>
+            </div>
 
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
+            </div>
+          </div>
 
           <label for="asunto">Asunto</label>
           <input type="text" id="asunto" name="asunto" minlength="3" maxlength="80" placeholder="Ejemplo: Consulta sobre el Plan Estándar" required>
 
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="987654321" required>
+          <!-- La segunda fila mantiene juntos los datos numéricos. -->
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="987654321" autocomplete="tel" required>
+            </div>
 
-          <label for="edad">Edad</label>
-          <input type="number" id="edad" name="edad" min="16" max="80" required>
+            <div class="campo">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" min="16" max="80" placeholder="Ejemplo: 20" required>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset>
@@ -227,14 +340,36 @@
         <p class="nota">Este formulario corresponde a un prototipo académico y no almacena información.</p>
       </form>
     </section>
+    <!-- ===== FIN CONTACTO ===== -->
   </main>
 
+  <!-- ===== FOOTER: enlaces, contacto y derechos reservados ===== -->
   <footer>
-    <p><strong>Mi GymPro</strong> - Entrena con propósito.</p>
-    <p>Teléfono: 987 654 321</p>
-    <p>Correo: contacto@migympro.pe</p>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <h3>Mi GymPro</h3>
+        <p>Entrena con propósito.</p>
+      </div>
+      <nav class="footer-enlaces" aria-label="Enlaces del pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-contacto">
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+51987654321">987 654 321</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contacto@migympro.pe">contacto@migympro.pe</a></p>
+        <p><i class="fa-solid fa-clock"></i> Lunes a viernes: 6:00 a. m. - 10:00 p. m.</p>
+      </div>
+    </div>
     <p>&copy; 2026 Mi GymPro. Proyecto académico.</p>
-    <a href="#inicio">Volver al inicio</a>
   </footer>
+  <!-- ===== FIN FOOTER ===== -->
+
+<!-- Botón fijo que permite volver al inicio de la página -->
+<a class="scroll-up" href="#inicio" title="Volver al inicio">
+   <i class="fa-solid fa-angle-up"></i>
+</a>
+
 </body>
 </html>
