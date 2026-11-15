@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+  <!-- Codificación, metadatos y ancho de pantalla. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mi GymPro: planes de entrenamiento y formulario de inscripción.">
-  <title>Mi GymPro</title>
+  <title>Inicio | Mi GymPro</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Enlazar HTML con la fuente Poppins de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+  <!-- Fuentes Poppins y Bebas Neue de Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
-    <!-- Enlazar el HTML con la librería de iconos de fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font Awesome aporta los iconos de marca de WhatsApp y TikTok. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer">
+  <!-- Iconos Lucide. Se carga antes de main.js para generar los SVG. -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
-    <!-- Enlaza la página con el favicon solicitado para la entrega. -->
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <!-- Icono de la pestaña del navegador. -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Carga las interacciones después de analizar el HTML mediante defer. -->
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
-  <!-- ===== BARRA SUPERIOR: datos de contacto rápido ===== -->
+
+<body><a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <!-- Contacto y redes sociales compartidos por las cinco páginas. -->
   <div class="barra-superior">
     <div class="contenedor barra-superior-contenido">
-      <a href="tel:+51987654321"><i class="fa-solid fa-phone"></i> 987 654 321</a>
-      <a href="mailto:contacto@migympro.pe"><i class="fa-solid fa-envelope"></i> contacto@migympro.pe</a>
-      <span><i class="fa-solid fa-location-dot"></i> Av. Principal 245, Lima</span>
+      <div class="barra-contacto">
+        <a href="mailto:contacto@migympro.example"><i data-lucide="mail" aria-hidden="true"></i>
+          <span>contacto@migympro.example</span></a>
+        <a class="barra-telefono" href="tel:+51987654321" aria-label="Llamar al +51 987 654 321"><i data-lucide="phone" aria-hidden="true"></i> <span>+51 987 654 321</span></a>
+      </div>
+      <!-- Enlaces a las redes sociales de UTP. -->
+      <div class="barra-redes">
+        <a href="https://www.instagram.com/universidadutp/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Instagram" title="UTP en Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+        <a href="https://bit.ly/ConversaUTP_WA" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de UTP" title="WhatsApp de UTP"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/UTP.Peru/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Facebook" title="UTP en Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@universidadutp" target="_blank" rel="noopener noreferrer" aria-label="UTP en TikTok" title="UTP en TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      </div>
     </div>
   </div>
-  <!-- ===== FIN BARRA SUPERIOR ===== -->
-
-  <!-- ===== CABECERA: marca y navegación principal ===== -->
   <header id="inicio">
     <div class="encabezado">
-      <p class="marca">
-        <a href="index.html" title="Ir al inicio">MI <strong>GYMPRO</strong></a>
-      </p>
-
-      <!-- Menú con enlaces internos hacia las secciones de la página -->
-      <nav class="nav-menu" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#planes">Planes</a>
-        <a href="#galeria">Galería</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <p class="marca"><a href="index.html" aria-label="Mi GymPro, inicio">MI <strong>GYMPRO</strong></a></p>
+      <!-- Botón hamburguesa con iconos de apertura y cierre. Se muestra hasta 992 px. -->
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false"
+        aria-label="Abrir menú"><i data-lucide="menu" class="icono-menu" aria-hidden="true"></i><i data-lucide="x" class="icono-cerrar" aria-hidden="true"></i> Menú</button>
+      <!-- Menú principal vinculado al botón hamburguesa. aria-current indica la página actual. -->
+      <nav id="menu-principal" class="nav-menu" aria-label="Navegación principal"><a href="index.html" class="activo"
+          aria-current="page">Inicio</a><a href="nosotros.html">Nosotros</a><a href="planes.html">Planes y
+          horarios</a><a href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
     </div>
-
-    <!-- ===== HERO: mensaje principal y promoción ===== -->
     <section class="presentacion">
       <!-- Imagen principal incluida en HTML para describirla mediante el atributo alt -->
       <img src="assets/img/clase-spinning-hero.jpg"
@@ -63,7 +66,7 @@
           <p class="etiqueta">ENTRENA SIN LÍMITES</p>
           <h1>Supera tus objetivos</h1>
           <p>Planes flexibles, equipos modernos y orientación para entrenar a tu ritmo.</p>
-          <a class="boton-enlace" href="#planes">Ver planes</a>
+          <a class="boton-enlace" href="planes.html">Ver planes</a>
         </div>
 
         <aside class="promocion">
@@ -73,17 +76,16 @@
         </aside>
       </div>
     </section>
-    <!-- ===== FIN HERO ===== -->
   </header>
-  <!-- ===== FIN CABECERA ===== -->
-
-  <main>
-    <!-- ===== NOSOTROS: presentación del gimnasio ===== -->
+  <!-- Contenido principal y destino del enlace accesible Saltar al contenido. -->
+  <main id="contenido">
+    <!-- Presentación del gimnasio, misión, visión e imagen descriptiva. -->
     <section id="nosotros" class="seccion nosotros">
       <div class="nosotros-col1">
         <p class="etiqueta">SOBRE NOSOTROS</p>
         <h2>Un espacio para alcanzar tus objetivos</h2>
-        <p>Mi GymPro es un gimnasio orientado al bienestar y al entrenamiento responsable. Contamos con máquinas, clases grupales y entrenadores preparados para acompañar a nuestros clientes.</p>
+        <p>Mi GymPro es un gimnasio orientado al bienestar y al entrenamiento responsable. Contamos con máquinas, clases
+          grupales y entrenadores preparados para acompañar a nuestros clientes.</p>
         <p><strong>Misión:</strong> ofrecer un espacio seguro y accesible para mejorar la salud física.</p>
         <p><strong>Visión:</strong> ser un gimnasio reconocido por la buena atención y el acompañamiento constante.</p>
       </div>
@@ -92,11 +94,31 @@
         <img src="assets/img/zona-pesas.png" alt="Zona de pesas de Mi GymPro" loading="lazy">
       </div>
     </section>
-    <!-- ===== FIN NOSOTROS ===== -->
-
-    <hr>
-
-    <!-- ===== PLANES: membresías disponibles ===== -->
+    <section class="seccion acceso-paginas">
+      <div class="titulo-seccion">
+        <p class="etiqueta">TU SIGUIENTE PASO</p>
+        <h2>Encuentra tu forma de entrenar</h2>
+        <p>Conoce nuestra propuesta, compara membresías y consulta cómo empezar.</p>
+      </div>
+      <div class="accesos">
+        <article>
+          <h3>Entrenamiento a tu ritmo</h3>
+          <p>Descubre la misión del gimnasio y cómo te acompañamos desde la primera visita.</p><a
+            href="nosotros.html">Conocer Mi GymPro →</a>
+        </article>
+        <article>
+          <h3>Planes para tus objetivos</h3>
+          <p>Compara los beneficios y consulta el horario semanal de atención.</p><a href="planes.html">Consultar planes
+            →</a>
+        </article>
+        <article>
+          <h3>Un espacio para avanzar</h3>
+          <p>Explora nuestras zonas de fuerza, cardio y entrenamiento funcional.</p><a href="galeria.html">Visitar la
+            galería →</a>
+        </article>
+      </div>
+    </section>
+    <!-- Membresías con precios, beneficios y enlaces hacia el formulario de contacto. -->
     <section id="planes" class="seccion">
       <div class="titulo-seccion">
         <p class="etiqueta">MEMBRESÍAS</p>
@@ -111,13 +133,13 @@
           <p class="descripcion-plan">Ideal para comenzar a entrenar con los equipos esenciales.</p>
           <p class="precio"><strong>S/ 60</strong> al mes</p>
           <div class="plan-beneficios">
-            <p><i class="fa-solid fa-dumbbell"></i> Máquinas y zona de pesas</p>
-            <p><i class="fa-solid fa-check"></i> Uso de vestidores</p>
-            <p><i class="fa-solid fa-clock"></i> Horario de 9:00 a. m. a 5:00 p. m.</p>
-            <p><i class="fa-solid fa-person-running"></i> Orientación durante la primera visita</p>
+            <p><i data-lucide="dumbbell" aria-hidden="true"></i> Máquinas y zona de pesas</p>
+            <p><i data-lucide="check" aria-hidden="true"></i> Uso de vestidores</p>
+            <p><i data-lucide="clock" aria-hidden="true"></i> Horario de 9:00 a. m. a 5:00 p. m.</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Orientación durante la primera visita</p>
           </div>
           <p class="condicion-plan">Acceso a una sede.</p>
-          <a href="#contacto">Seleccionar plan</a>
+          <a href="contacto.html">Seleccionar plan</a>
         </article>
 
         <article class="plan destacado">
@@ -127,13 +149,13 @@
           <p class="descripcion-plan">Una opción completa para entrenar con mayor variedad.</p>
           <p class="precio"><strong>S/ 100</strong> al mes</p>
           <div class="plan-beneficios">
-            <p><i class="fa-solid fa-dumbbell"></i> Acceso a todas las zonas</p>
-            <p><i class="fa-solid fa-people-group"></i> Clases grupales con instructor</p>
-            <p><i class="fa-solid fa-heart-pulse"></i> Evaluación física mensual</p>
-            <p><i class="fa-solid fa-person-running"></i> Rutina básica de entrenamiento</p>
+            <p><i data-lucide="dumbbell" aria-hidden="true"></i> Acceso a todas las zonas</p>
+            <p><i data-lucide="users" aria-hidden="true"></i> Clases grupales con instructor</p>
+            <p><i data-lucide="heart-pulse" aria-hidden="true"></i> Evaluación física mensual</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Rutina básica de entrenamiento</p>
           </div>
           <p class="condicion-plan">Acceso en todo el horario de atención.</p>
-          <a href="#contacto">Seleccionar plan</a>
+          <a href="contacto.html">Seleccionar plan</a>
         </article>
 
         <article class="plan">
@@ -142,234 +164,38 @@
           <p class="descripcion-plan">Mayor acompañamiento para avanzar hacia objetivos específicos.</p>
           <p class="precio"><strong>S/ 160</strong> al mes</p>
           <div class="plan-beneficios">
-            <p><i class="fa-solid fa-clock"></i> Acceso en todo el horario</p>
-            <p><i class="fa-solid fa-people-group"></i> Clases grupales con instructor</p>
-            <p><i class="fa-solid fa-person-running"></i> Rutina de entrenamiento personalizada</p>
-            <p><i class="fa-solid fa-heart-pulse"></i> Seguimiento físico mensual</p>
+            <p><i data-lucide="clock" aria-hidden="true"></i> Acceso en todo el horario</p>
+            <p><i data-lucide="users" aria-hidden="true"></i> Clases grupales con instructor</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Rutina de entrenamiento personalizada</p>
+            <p><i data-lucide="heart-pulse" aria-hidden="true"></i> Seguimiento físico mensual</p>
           </div>
           <p class="condicion-plan">Incluye una orientación personal al mes.</p>
-          <a href="#contacto">Seleccionar plan</a>
+          <a href="contacto.html">Seleccionar plan</a>
         </article>
       </div>
     </section>
-    <!-- ===== FIN PLANES ===== -->
-
-    <!-- ===== HORARIOS: tabla informativa ===== -->
-    <section id="horarios" class="seccion">
-      <div class="titulo-seccion">
-        <p class="etiqueta">HORARIOS</p>
-        <h2>Organiza tu entrenamiento</h2>
-        <p>Consulta nuestros horarios de atención y elige el momento que mejor se adapte a tu rutina.</p>
-      </div>
-
-      <!-- Tabla semántica con cabecera y cuerpo de horarios -->
-      <table>
-        <thead>
-          <tr>
-            <th>Días</th>
-            <th>Apertura</th>
-            <th>Cierre</th>
-            <th>Servicios disponibles</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lunes a viernes</td>
-            <td>6:00 a. m.</td>
-            <td>10:00 p. m.</td>
-            <td>Máquinas, clases grupales y entrenador personal</td>
-          </tr>
-          <tr>
-            <td>Sábado</td>
-            <td>7:00 a. m.</td>
-            <td>8:00 p. m.</td>
-            <td>Máquinas y clases grupales</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <!-- ===== FIN HORARIOS ===== -->
-
-    <!-- ===== GALERÍA: espacios organizados con Flexbox ===== -->
-    <section id="galeria" class="seccion">
-      <div class="titulo-seccion">
-        <p class="etiqueta">NUESTROS ESPACIOS</p>
-        <h2>Entrena en un ambiente preparado para ti</h2>
-        <p>Conoce algunas de las zonas que encontrarás en Mi GymPro.</p>
-      </div>
-
-      <div class="galeria-flex">
-        <figure class="galeria-item">
-          <img src="assets/img/zona-musculacion.jpg" alt="Zona de musculación con máquinas y pesas" loading="lazy">
-          <figcaption>
-            <h3>Zona de fuerza</h3>
-            <p>Pesas y equipos para desarrollar fuerza y resistencia.</p>
-          </figcaption>
-        </figure>
-        <figure class="galeria-item">
-          <img src="assets/img/maquinas-cardio.png" alt="Zona de cardio con máquinas de entrenamiento" loading="lazy">
-          <figcaption>
-            <h3>Zona de máquinas</h3>
-            <p>Equipos de cardio para mejorar tu condición física.</p>
-          </figcaption>
-        </figure>
-        <figure class="galeria-item">
-          <img src="assets/img/zona-cross-training.png" alt="Espacio equipado para cross training" loading="lazy">
-          <figcaption>
-            <h3>Entrenamiento funcional</h3>
-            <p>Un espacio dinámico para trabajar todo el cuerpo.</p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-    <!-- ===== FIN GALERÍA ===== -->
-
-    <!-- ===== MULTIMEDIA: video local y video de YouTube ===== -->
-    <section id="multimedia" class="seccion multimedia">
-      <div class="titulo-seccion">
-        <p class="etiqueta">INSTALACIONES</p>
-        <h2>Conoce Mi GymPro</h2>
-        <p>Observa nuestros espacios y conoce el ambiente donde podrás entrenar.</p>
-      </div>
-
-      <div class="multimedia-flex">
-        <article>
-          <h3>Recorrido por nuestras instalaciones</h3>
-          <!-- Video MP4 almacenado dentro del proyecto -->
-          <video controls preload="metadata">
-            <source src="assets/videos/migympro.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-        </article>
-        <article>
-          <h3>Rutina para tu primer día</h3>
-          <!-- Video externo insertado mediante iframe -->
-          <iframe src="https://www.youtube.com/embed/O8rUY1p-Y5o"
-            title="Rutina de ejercicios para empezar en el gimnasio"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </article>
-      </div>
-    </section>
-    <!-- ===== FIN MULTIMEDIA ===== -->
-
-    <!-- ===== CONTACTO: información y solicitud de inscripción ===== -->
-    <section id="contacto" class="seccion contacto">
-      <div class="formulario-info">
-        <p class="etiqueta">CONTACTO E INSCRIPCIÓN</p>
-        <h2>Comienza tu entrenamiento</h2>
-        <p>Completa el formulario para solicitar tu inscripción. Nos comunicaremos contigo para confirmar la disponibilidad.</p>
-        <p><strong>Dirección:</strong><br>Av. Principal 245, Lima, Perú</p>
-        <p><strong>Teléfono:</strong><br><a href="tel:+51987654321">987 654 321</a></p>
-        <p><strong>Correo:</strong><br><a href="mailto:contacto@migympro.pe">contacto@migympro.pe</a></p>
-      </div>
-
-      <!-- Formulario con validaciones nativas de HTML5 -->
-      <form method="post">
-        <fieldset>
-          <legend>Datos personales</legend>
-
-          <!-- La fila agrupa dos campos sencillos mediante Flexbox. -->
-          <div class="fila-campos">
-            <div class="campo">
-              <label for="nombre">Nombres y apellidos</label>
-              <input type="text" id="nombre" name="nombre" minlength="3" placeholder="Ejemplo: Carlos Pérez" autocomplete="name" required>
-            </div>
-
-            <div class="campo">
-              <label for="correo">Correo electrónico</label>
-              <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
-            </div>
-          </div>
-
-          <label for="asunto">Asunto</label>
-          <input type="text" id="asunto" name="asunto" minlength="3" maxlength="80" placeholder="Ejemplo: Consulta sobre el Plan Estándar" required>
-
-          <!-- La segunda fila mantiene juntos los datos numéricos. -->
-          <div class="fila-campos">
-            <div class="campo">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="987654321" autocomplete="tel" required>
-            </div>
-
-            <div class="campo">
-              <label for="edad">Edad</label>
-              <input type="number" id="edad" name="edad" min="16" max="80" placeholder="Ejemplo: 20" required>
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Plan y horario</legend>
-
-          <label for="plan">Plan de interés</label>
-          <select id="plan" name="plan" required>
-            <option value="">Selecciona un plan</option>
-            <option value="basico">Plan Básico</option>
-            <option value="estandar">Plan Estándar</option>
-            <option value="premium">Plan Premium</option>
-          </select>
-
-          <p class="pregunta">Horario preferido</p>
-          <div class="opciones">
-            <input type="radio" id="manana" name="horario" value="manana" required>
-            <label for="manana">Mañana</label>
-
-            <input type="radio" id="tarde" name="horario" value="tarde">
-            <label for="tarde">Tarde</label>
-
-            <input type="radio" id="noche" name="horario" value="noche">
-            <label for="noche">Noche</label>
-          </div>
-
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4" maxlength="300" placeholder="Escribe tu consulta" required></textarea>
-
-          <div class="aceptacion">
-            <input type="checkbox" id="terminos" name="terminos" required>
-            <label for="terminos">Acepto que se comuniquen conmigo.</label>
-          </div>
-        </fieldset>
-
-        <div class="botones">
-          <button type="submit">Enviar solicitud</button>
-          <button class="boton-secundario" type="reset">Limpiar</button>
-        </div>
-
-        <p class="nota">Este formulario corresponde a un prototipo académico y no almacena información.</p>
-      </form>
-    </section>
-    <!-- ===== FIN CONTACTO ===== -->
   </main>
-
-  <!-- ===== FOOTER: enlaces, contacto y derechos reservados ===== -->
+  <!-- Pie compartido con navegación secundaria y datos de contacto. -->
   <footer>
     <div class="contenedor footer-contenido">
       <div class="footer-marca">
-        <h3>Mi GymPro</h3>
+        <h2>Mi GymPro</h2>
         <p>Entrena con propósito.</p>
+        <p>Gimnasio · Lima, Perú</p>
       </div>
-      <nav class="footer-enlaces" aria-label="Enlaces del pie de página">
-        <a href="#inicio">Inicio</a>
-        <a href="#planes">Planes</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <nav class="footer-enlaces" aria-label="Navegación del pie"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html">Planes y horarios</a><a
+          href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
       <div class="footer-contacto">
-        <p><i class="fa-solid fa-phone"></i> <a href="tel:+51987654321">987 654 321</a></p>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contacto@migympro.pe">contacto@migympro.pe</a></p>
-        <p><i class="fa-solid fa-clock"></i> Lunes a viernes: 6:00 a. m. - 10:00 p. m.</p>
+        <p><a href="tel:+51987654321">987 654 321</a></p>
+        <p><a href="mailto:contacto@migympro.example">contacto@migympro.example</a></p>
+        <p>Lunes a viernes: 6:00 a. m. a 10:00 p. m.<br>Sábado: 7:00 a. m. a 8:00 p. m.</p>
       </div>
     </div>
-    <p>&copy; 2026 Mi GymPro. Proyecto académico.</p>
+    <p>© 2026 Mi GymPro. Todos los derechos reservados.</p>
   </footer>
-  <!-- ===== FIN FOOTER ===== -->
-
-<!-- Botón fijo que permite volver al inicio de la página -->
-<a class="scroll-up" href="#inicio" title="Volver al inicio">
-   <i class="fa-solid fa-angle-up"></i>
-</a>
-
+  <!-- main.js muestra este botón después de desplazarse más de 300 píxeles. -->
+  <button class="scroll-up" type="button" aria-label="Volver al inicio" hidden><i data-lucide="chevron-up" aria-hidden="true"></i></button>
 </body>
+
 </html>

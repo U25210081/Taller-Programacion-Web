@@ -108,7 +108,7 @@ h3 {
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* ========================================
@@ -116,9 +116,9 @@ h3 {
    ======================================== */
 /* Mantiene visibles los datos de contacto en la parte superior. */
 .barra-superior {
-  background-color: var(--color-acento);
-  color: var(--color-principal);
-  font-size: 14px;
+  background-color: #0d182b;
+  color: var(--color-blanco);
+  font-size: 12px;
   left: 0;
   position: fixed;
   right: 0;
@@ -130,17 +130,47 @@ h3 {
 .barra-superior-contenido {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  gap: 8px;
+  height: 38px;
+  justify-content: space-between;
+}
+
+.barra-contacto,
+.barra-redes {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.barra-redes {
+  gap: 4px;
 }
 
 /* Da formato a los enlaces de teléfono y correo. */
 .barra-superior a {
-  color: var(--color-principal);
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  gap: 6px;
+  min-height: 32px;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.barra-redes a {
+  font-size: 18px;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.barra-contacto a:hover span {
+  text-decoration: underline;
+}
+
+.barra-superior a:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 0;
+  border-radius: 4px;
 }
 
 /* ========================================
@@ -200,7 +230,7 @@ header {
   padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* ========================================
@@ -263,7 +293,7 @@ main {
   gap: 40px;
 }
 
-/* Da mayor ancho al título que al texto descriptivo. */
+/* Distribuye el ancho de la columna de texto. */
 .nosotros-col1 {
   flex: 2;
 }
@@ -295,7 +325,7 @@ main {
   border: 1px solid var(--color-borde);
   flex: 1;
   padding: 30px;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* Da formato a los nombres de los planes. */
@@ -336,8 +366,27 @@ main {
   margin-bottom: 10px;
 }
 
-.plan-beneficios i {
+.plan-beneficios .lucide {
   color: var(--color-acento);
+}
+
+/* Tamaño y alineación de los iconos Lucide. */
+.lucide {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Alterna los iconos del menú según el valor de aria-expanded. */
+.menu-toggle .icono-cerrar,
+.menu-toggle[aria-expanded="true"] .icono-menu {
+  display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .icono-cerrar {
+  display: inline-block;
 }
 
 /* Separa la condición principal del botón de selección. */
@@ -357,7 +406,7 @@ main {
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* Destaca el plan más elegido con fondo oscuro y borde de acento. */
@@ -411,7 +460,7 @@ tbody td:nth-child(3) {
 /* ========================================
    10. GALERÍA FLEXBOX
    ======================================== */
-/* Utiliza todas las propiedades Flexbox solicitadas en el PDF. */
+/* Organiza las imágenes con Flexbox y permite el salto de línea. */
 .galeria-flex {
   align-items: center;
   display: flex;
@@ -425,7 +474,7 @@ tbody td:nth-child(3) {
 .galeria-item {
   flex: 1;
   text-align: center;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* Redondea las fotografías para darles una apariencia deportiva actual. */
@@ -592,7 +641,7 @@ button {
   cursor: pointer;
   font: inherit;
   padding: 10px 30px;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* Diferencia el botón utilizado para limpiar. */
@@ -600,7 +649,7 @@ button {
   background-color: var(--color-texto-suave);
 }
 
-/* Presenta la aclaración académica con menor tamaño. */
+/* Presenta la nota de ayuda con menor tamaño. */
 .nota {
   color: var(--color-texto-suave);
   font-size: 12px;
@@ -738,4 +787,638 @@ button:hover {
 .formulario-info a:hover,
 footer a:hover {
   color: var(--color-acento);
+}
+
+/* Estilos compartidos de navegación, accesibilidad y páginas internas. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 150px;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+main,
+.contenedor {
+  width: min(1100px, calc(100% - 64px));
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+input,
+select,
+textarea,
+.campo {
+  min-width: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #b07000;
+  outline-offset: 4px;
+}
+
+/* Muestra el enlace de acceso al contenido al navegar con el teclado. */
+.saltar-contenido {
+  position: fixed;
+  top: -100px;
+  left: 12px;
+  z-index: 2000;
+  background: white;
+  padding: 12px;
+}
+
+.saltar-contenido:focus {
+  top: 8px;
+}
+
+.encabezado {
+  top: 38px;
+  min-height: 84px;
+  padding: 12px 32px;
+}
+
+header {
+  padding-top: 122px;
+}
+
+.nav-menu a {
+  font-size: 12px;
+}
+
+/* Resalta el enlace de la página actual. */
+.nav-menu .activo {
+  color: var(--color-acento);
+  box-shadow: inset 0 -2px var(--color-acento);
+}
+
+.nav-menu .activo:hover {
+  color: var(--color-principal);
+}
+
+/* Oculta el botón hamburguesa en pantallas grandes. */
+.menu-toggle {
+  display: none;
+}
+
+.cabecera-interna {
+  padding: 64px max(32px, calc((100% - 1100px) / 2));
+  background: linear-gradient(120deg, #14213d, #24395b);
+}
+
+.cabecera-interna h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.cabecera-interna a {
+  color: white;
+}
+
+.presentacion>img {
+  height: 540px;
+  object-fit: cover;
+}
+
+.presentacion-contenido {
+  top: 70px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.seccion .etiqueta {
+  color: #805c00;
+}
+
+.plan .numero-plan {
+  color: #805c00;
+}
+
+.destacado .numero-plan,
+.destacado .recomendado {
+  color: var(--color-acento);
+}
+
+.nosotros-col2 img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.lista-planes {
+  align-items: stretch;
+}
+
+.plan {
+  min-width: 0;
+}
+
+.plan a {
+  font-size: 12px;
+}
+
+.accesos {
+  display: flex;
+  gap: 28px;
+}
+
+.canales-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 28px;
+}
+
+.accesos article {
+  flex: 1;
+  min-width: 0;
+}
+
+.accesos h3,
+.canales-lista h3 {
+  font-size: 28px;
+  color: var(--color-principal);
+  margin-bottom: 12px;
+}
+
+.accesos a,
+.canales-lista a {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.accesos article {
+  border-top: 3px solid var(--color-acento);
+  padding-top: 22px;
+}
+
+.accesos p {
+  margin-bottom: 16px;
+}
+
+.enlace-final {
+  margin-top: 28px;
+}
+
+/* Galería de tres columnas, adaptable a dos o una según el ancho. */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.galeria-item {
+  min-width: 0;
+}
+
+.galeria-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Permite desplazar la tabla horizontalmente en pantallas pequeñas. */
+.tabla-contenedor {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table {
+  min-width: 620px;
+}
+
+caption {
+  text-align: left;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+tbody th {
+  text-align: left;
+  font-weight: 500;
+}
+
+.contacto {
+  align-items: flex-start;
+}
+
+.contacto .formulario-info {
+  flex: 0.85;
+}
+
+.contacto form {
+  flex: 1.15;
+  min-width: 0;
+}
+
+.opciones {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#canales,
+#ubicacion {
+  scroll-margin-top: 122px;
+}
+
+.ubicacion iframe {
+  width: 100%;
+  height: 400px;
+  margin-top: 24px;
+}
+
+.footer-enlaces {
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.footer-marca h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--color-acento);
+}
+
+footer>p {
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.footer-contacto {
+  font-size: 12px;
+}
+
+.scroll-up {
+  padding: 0;
+  font-size: 26px;
+  z-index: 900;
+  box-shadow: 0 3px 14px #0003;
+}
+
+/* Chevrón de retorno centrado y con un trazo visible dentro del botón. */
+.scroll-up .lucide {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5;
+}
+
+/* Estilos del mensaje de validación cuando contiene texto. */
+#estado-formulario:not(:empty) {
+  padding: 16px;
+  margin-top: 16px;
+  border-left: 4px solid var(--color-acento);
+  background: white;
+}
+
+/* Pantallas amplias: espaciados y contenedor fluidos hasta 1200 px. */
+@media (max-width: 1200px) {
+  .encabezado {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .nav-menu a {
+    padding: 10px 8px;
+  }
+
+  .plan {
+    padding: 24px;
+  }
+
+  .presentacion-contenido {
+    left: 32px;
+    right: 32px;
+  }
+
+  .seccion {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .footer-contenido {
+    gap: 28px;
+  }
+}
+
+/* Tabletas: el menú se controla con main.js y las columnas se reorganizan. */
+@media (max-width: 992px) {
+
+  main,
+  .contenedor {
+    width: calc(100% - 48px);
+  }
+
+  .encabezado {
+    flex-wrap: wrap;
+  }
+
+  /* Muestra el botón hamburguesa hasta 992 px con JavaScript activo. */
+  .js .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #ffffff70;
+  }
+
+  .nav-menu {
+    flex-basis: 100%;
+    flex-direction: column;
+    padding: 12px 0;
+    max-height: calc(100dvh - 122px);
+    overflow-y: auto;
+  }
+
+  /* Oculta el menú móvil cuando no tiene la clase abierto. */
+  .js .nav-menu {
+    display: none;
+  }
+
+  /* Muestra el menú cuando JavaScript agrega la clase abierto. */
+  .js .nav-menu.abierto {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 14px;
+  }
+
+  .presentacion-contenido {
+    gap: 20px;
+  }
+
+  .presentacion h1 {
+    font-size: 46px;
+  }
+
+  .promocion {
+    padding: 20px;
+  }
+
+  .nosotros {
+    gap: 24px;
+  }
+
+  .lista-planes {
+    flex-wrap: wrap;
+  }
+
+  .plan {
+    flex: 1 1 250px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .contacto {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .formulario-info,
+  .contacto form {
+    width: 100%;
+  }
+
+  .footer-contenido {
+    flex-wrap: wrap;
+  }
+
+  .footer-marca,
+  .footer-contacto {
+    flex-basis: 40%;
+  }
+
+  .footer-enlaces {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+}
+
+/* Móviles grandes: bloques en una columna y medios ajustados al ancho. */
+@media (max-width: 768px) {
+
+  main,
+  .contenedor {
+    width: calc(100% - 40px);
+  }
+
+  .presentacion>img {
+    height: 600px;
+  }
+
+  .presentacion-contenido {
+    left: 20px;
+    right: 20px;
+    top: 36px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+
+  .presentacion h1 {
+    font-size: 44px;
+  }
+
+  .promocion {
+    padding: 16px;
+  }
+
+  .nosotros,
+  .multimedia-flex,
+  .accesos {
+    flex-direction: column;
+  }
+
+  .nosotros-col1,
+  .nosotros-col2 {
+    width: 100%;
+  }
+
+  .nosotros-col2 img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .multimedia-flex article {
+    width: 100%;
+  }
+
+  .accesos {
+    gap: 32px;
+  }
+
+  .cabecera-interna {
+    padding: 44px 20px;
+  }
+
+  .cabecera-interna h1 {
+    font-size: 50px;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-marca,
+  .footer-contacto {
+    text-align: center;
+  }
+
+  .footer-enlaces {
+    order: initial;
+  }
+
+  .ubicacion iframe {
+    height: 330px;
+  }
+}
+
+/* Ajustes para pantallas de hasta 480 px. */
+@media (max-width: 480px) {
+
+  main,
+  .contenedor {
+    width: calc(100% - 32px);
+  }
+
+  .barra-superior {
+    font-size: 11px;
+  }
+
+  .barra-contacto {
+    gap: 4px;
+  }
+
+  /* Mantiene los cuatro enlaces de redes UTP dentro de la barra en móviles. */
+  .barra-redes {
+    gap: 0;
+  }
+
+  .barra-redes a {
+    min-width: 24px;
+    font-size: 16px;
+  }
+
+  .barra-telefono {
+    justify-content: center;
+    min-width: 24px;
+  }
+
+  .barra-telefono span {
+    display: none;
+  }
+
+  .encabezado {
+    padding: 12px 16px;
+  }
+
+  .marca {
+    font-size: 29px;
+  }
+
+  .menu-toggle {
+    font-size: 12px;
+  }
+
+  .presentacion-contenido {
+    left: 16px;
+    right: 16px;
+    padding: 20px;
+    top: 28px;
+  }
+
+  .presentacion h1 {
+    font-size: 40px;
+  }
+
+  .presentacion>img {
+    height: 620px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .cabecera-interna h1 {
+    font-size: 40px;
+  }
+
+  .seccion {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .galeria-grid,
+  .canales-lista {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fila-campos {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  fieldset {
+    padding: 16px;
+  }
+
+  .botones {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .botones button {
+    flex: 1;
+    padding: 10px 14px;
+  }
+
+  .ubicacion iframe {
+    height: 280px;
+  }
+
+  .scroll-up {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+/* Desactiva las transiciones si el usuario prefiere movimiento reducido. */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }

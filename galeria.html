@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Codificación, metadatos y ancho de pantalla. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mi GymPro: planes de entrenamiento y formulario de inscripción.">
+  <title>Galería | Mi GymPro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Fuentes Poppins y Bebas Neue de Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome aporta los iconos de marca de WhatsApp y TikTok. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer">
+  <!-- Iconos Lucide. Se carga antes de main.js para generar los SVG. -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Icono de la pestaña del navegador. -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Carga las interacciones después de analizar el HTML mediante defer. -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body><a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <!-- Contacto y redes sociales compartidos por las cinco páginas. -->
+  <div class="barra-superior">
+    <div class="contenedor barra-superior-contenido">
+      <div class="barra-contacto">
+        <a href="mailto:contacto@migympro.example"><i data-lucide="mail" aria-hidden="true"></i>
+          <span>contacto@migympro.example</span></a>
+        <a class="barra-telefono" href="tel:+51987654321" aria-label="Llamar al +51 987 654 321"><i data-lucide="phone" aria-hidden="true"></i> <span>+51 987 654 321</span></a>
+      </div>
+      <!-- Enlaces a las redes sociales de UTP. -->
+      <div class="barra-redes">
+        <a href="https://www.instagram.com/universidadutp/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Instagram" title="UTP en Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+        <a href="https://bit.ly/ConversaUTP_WA" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de UTP" title="WhatsApp de UTP"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/UTP.Peru/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Facebook" title="UTP en Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@universidadutp" target="_blank" rel="noopener noreferrer" aria-label="UTP en TikTok" title="UTP en TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <header id="inicio">
+    <div class="encabezado">
+      <p class="marca"><a href="index.html" aria-label="Mi GymPro, inicio">MI <strong>GYMPRO</strong></a></p>
+      <!-- Botón hamburguesa con iconos de apertura y cierre. Se muestra hasta 992 px. -->
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false"
+        aria-label="Abrir menú"><i data-lucide="menu" class="icono-menu" aria-hidden="true"></i><i data-lucide="x" class="icono-cerrar" aria-hidden="true"></i> Menú</button>
+      <!-- Menú principal vinculado al botón hamburguesa. aria-current indica la página actual. -->
+      <nav id="menu-principal" class="nav-menu" aria-label="Navegación principal"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html">Planes y horarios</a><a href="galeria.html"
+          class="activo" aria-current="page">Galería</a><a href="contacto.html">Contacto</a></nav>
+    </div>
+    <!-- Cabecera con el título de la página y un enlace al inicio. -->
+    <div class="cabecera-interna">
+      <p class="etiqueta">MI GYMPRO</p>
+      <h1>Galería</h1>
+      <p><a href="index.html">Inicio</a> / Galería</p>
+    </div>
+  </header>
+  <!-- Contenido principal y destino del enlace accesible Saltar al contenido. -->
+  <main id="contenido">
+    <!-- Galería de instalaciones con imágenes y descripciones de cada espacio. -->
+    <section id="galeria" class="seccion">
+      <div class="titulo-seccion">
+        <p class="etiqueta">NUESTROS ESPACIOS</p>
+        <h2>Entrena en un ambiente preparado para ti</h2>
+        <p>Conoce algunas de las zonas que encontrarás en Mi GymPro.</p>
+      </div>
+
+      <div class="galeria-grid">
+        <figure class="galeria-item">
+          <img src="assets/img/zona-musculacion.jpg" alt="Zona de musculación con máquinas y pesas" loading="lazy">
+          <figcaption>
+            <h3>Zona de fuerza</h3>
+            <p>Pesas y equipos para desarrollar fuerza y resistencia.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="assets/img/maquinas-cardio.png" alt="Zona de cardio con máquinas de entrenamiento" loading="lazy">
+          <figcaption>
+            <h3>Zona de máquinas</h3>
+            <p>Equipos de cardio para mejorar tu condición física.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="assets/img/zona-cross-training.png" alt="Espacio equipado para cross training" loading="lazy">
+          <figcaption>
+            <h3>Entrenamiento funcional</h3>
+            <p>Un espacio dinámico para trabajar todo el cuerpo.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item"><img src="assets/img/clase-spinning.jpg" alt="Spinning en el gimnasio"
+            loading="lazy">
+          <figcaption>
+            <h3>Spinning</h3>
+            <p>Bicicletas estáticas para las sesiones grupales.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item"><img src="assets/img/entrenamiento-funcional.webp"
+            alt="Movimiento y coordinación en el gimnasio" loading="lazy">
+          <figcaption>
+            <h3>Movimiento y coordinación</h3>
+            <p>Entrenamiento con ejercicios adaptados a tu nivel.</p>
+          </figcaption>
+        </figure>
+        <figure class="galeria-item"><img src="assets/img/zona-de-entrenamiento.webp"
+            alt="Espacio de entrenamiento en el gimnasio" loading="lazy">
+          <figcaption>
+            <h3>Espacio de entrenamiento</h3>
+            <p>Ambientes para completar tu rutina diaria.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- Video local y video de YouTube. -->
+    <section id="multimedia" class="seccion multimedia">
+      <div class="titulo-seccion">
+        <p class="etiqueta">INSTALACIONES</p>
+        <h2>Conoce Mi GymPro</h2>
+        <p>Observa nuestros espacios y conoce el ambiente donde podrás entrenar.</p>
+      </div>
+
+      <div class="multimedia-flex">
+        <article>
+          <h3>Recorrido por nuestras instalaciones</h3>
+          <!-- Video MP4 almacenado dentro del proyecto -->
+          <video controls autoplay loop muted playsinline preload="metadata" aria-label="Recorrido por el gimnasio">
+            <source src="assets/videos/migympro.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+        </article>
+        <article>
+          <h3>Rutina para tu primer día</h3>
+          <!-- Video externo insertado mediante iframe -->
+          <iframe src="https://www.youtube.com/embed/O8rUY1p-Y5o"
+            title="Rutina de ejercicios para empezar en el gimnasio" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Pie compartido con navegación secundaria y datos de contacto. -->
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <h2>Mi GymPro</h2>
+        <p>Entrena con propósito.</p>
+        <p>Gimnasio · Lima, Perú</p>
+      </div>
+      <nav class="footer-enlaces" aria-label="Navegación del pie"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html">Planes y horarios</a><a
+          href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+      <div class="footer-contacto">
+        <p><a href="tel:+51987654321">987 654 321</a></p>
+        <p><a href="mailto:contacto@migympro.example">contacto@migympro.example</a></p>
+        <p>Lunes a viernes: 6:00 a. m. a 10:00 p. m.<br>Sábado: 7:00 a. m. a 8:00 p. m.</p>
+      </div>
+    </div>
+    <p>© 2026 Mi GymPro. Todos los derechos reservados.</p>
+  </footer>
+  <!-- main.js muestra este botón después de desplazarse más de 300 píxeles. -->
+  <button class="scroll-up" type="button" aria-label="Volver al inicio" hidden><i data-lucide="chevron-up" aria-hidden="true"></i></button>
+</body>
+
+</html>

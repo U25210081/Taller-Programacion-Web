@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Codificación, metadatos y ancho de pantalla. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mi GymPro: planes de entrenamiento y formulario de inscripción.">
+  <title>Nosotros | Mi GymPro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Fuentes Poppins y Bebas Neue de Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome aporta los iconos de marca de WhatsApp y TikTok. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer">
+  <!-- Iconos Lucide. Se carga antes de main.js para generar los SVG. -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Icono de la pestaña del navegador. -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Carga las interacciones después de analizar el HTML mediante defer. -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body><a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <!-- Contacto y redes sociales compartidos por las cinco páginas. -->
+  <div class="barra-superior">
+    <div class="contenedor barra-superior-contenido">
+      <div class="barra-contacto">
+        <a href="mailto:contacto@migympro.example"><i data-lucide="mail" aria-hidden="true"></i>
+          <span>contacto@migympro.example</span></a>
+        <a class="barra-telefono" href="tel:+51987654321" aria-label="Llamar al +51 987 654 321"><i data-lucide="phone" aria-hidden="true"></i> <span>+51 987 654 321</span></a>
+      </div>
+      <!-- Enlaces a las redes sociales de UTP. -->
+      <div class="barra-redes">
+        <a href="https://www.instagram.com/universidadutp/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Instagram" title="UTP en Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+        <a href="https://bit.ly/ConversaUTP_WA" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de UTP" title="WhatsApp de UTP"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/UTP.Peru/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Facebook" title="UTP en Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@universidadutp" target="_blank" rel="noopener noreferrer" aria-label="UTP en TikTok" title="UTP en TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <header id="inicio">
+    <div class="encabezado">
+      <p class="marca"><a href="index.html" aria-label="Mi GymPro, inicio">MI <strong>GYMPRO</strong></a></p>
+      <!-- Botón hamburguesa con iconos de apertura y cierre. Se muestra hasta 992 px. -->
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false"
+        aria-label="Abrir menú"><i data-lucide="menu" class="icono-menu" aria-hidden="true"></i><i data-lucide="x" class="icono-cerrar" aria-hidden="true"></i> Menú</button>
+      <!-- Menú principal vinculado al botón hamburguesa. aria-current indica la página actual. -->
+      <nav id="menu-principal" class="nav-menu" aria-label="Navegación principal"><a href="index.html">Inicio</a><a
+          href="nosotros.html" class="activo" aria-current="page">Nosotros</a><a href="planes.html">Planes y
+          horarios</a><a href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+    </div>
+    <!-- Cabecera con el título de la página y un enlace al inicio. -->
+    <div class="cabecera-interna">
+      <p class="etiqueta">MI GYMPRO</p>
+      <h1>Nosotros</h1>
+      <p><a href="index.html">Inicio</a> / Nosotros</p>
+    </div>
+  </header>
+  <!-- Contenido principal y destino del enlace accesible Saltar al contenido. -->
+  <main id="contenido">
+    <!-- Presentación del gimnasio, misión, visión e imagen descriptiva. -->
+    <section id="nosotros" class="seccion nosotros">
+      <div class="nosotros-col1">
+        <p class="etiqueta">SOBRE NOSOTROS</p>
+        <h2>Un espacio para alcanzar tus objetivos</h2>
+        <p>Mi GymPro es un gimnasio orientado al bienestar y al entrenamiento responsable. Contamos con máquinas, clases
+          grupales y entrenadores preparados para acompañar a nuestros clientes.</p>
+        <p><strong>Misión:</strong> ofrecer un espacio seguro y accesible para mejorar la salud física.</p>
+        <p><strong>Visión:</strong> ser un gimnasio reconocido por la buena atención y el acompañamiento constante.</p>
+      </div>
+
+      <div class="nosotros-col2">
+        <img src="assets/img/zona-pesas.png" alt="Zona de pesas de Mi GymPro" loading="lazy">
+      </div>
+    </section>
+    <section class="seccion">
+      <div class="titulo-seccion">
+        <p class="etiqueta">NUESTRA PROPUESTA</p>
+        <h2>Acompañamiento desde el primer día</h2>
+      </div>
+      <div class="accesos">
+        <article>
+          <h3>Bienvenida y orientación</h3>
+          <p>Te presentamos los espacios y el uso básico de los equipos antes de iniciar tu rutina. Puedes consultar las
+            opciones disponibles según tu membresía.</p>
+        </article>
+        <article>
+          <h3>Progreso a tu ritmo</h3>
+          <p>La constancia y una rutina adaptada a tu experiencia guían nuestra propuesta. En los planes con seguimiento
+            revisamos contigo los objetivos de entrenamiento.</p>
+        </article>
+        <article>
+          <h3>Convivencia en el gimnasio</h3>
+          <p>Comparte los equipos, utiliza una toalla y deja el material en su lugar. El cuidado de los espacios ayuda a
+            que todos entrenemos cómodamente.</p>
+        </article>
+      </div>
+      <p class="enlace-final"><a class="boton-enlace" href="contacto.html">Consultar mi inscripción</a></p>
+    </section>
+  </main>
+  <!-- Pie compartido con navegación secundaria y datos de contacto. -->
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <h2>Mi GymPro</h2>
+        <p>Entrena con propósito.</p>
+        <p>Gimnasio · Lima, Perú</p>
+      </div>
+      <nav class="footer-enlaces" aria-label="Navegación del pie"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html">Planes y horarios</a><a
+          href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+      <div class="footer-contacto">
+        <p><a href="tel:+51987654321">987 654 321</a></p>
+        <p><a href="mailto:contacto@migympro.example">contacto@migympro.example</a></p>
+        <p>Lunes a viernes: 6:00 a. m. a 10:00 p. m.<br>Sábado: 7:00 a. m. a 8:00 p. m.</p>
+      </div>
+    </div>
+    <p>© 2026 Mi GymPro. Todos los derechos reservados.</p>
+  </footer>
+  <!-- main.js muestra este botón después de desplazarse más de 300 píxeles. -->
+  <button class="scroll-up" type="button" aria-label="Volver al inicio" hidden><i data-lucide="chevron-up" aria-hidden="true"></i></button>
+</body>
+
+</html>

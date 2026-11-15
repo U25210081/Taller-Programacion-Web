@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Codificación, metadatos y ancho de pantalla. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mi GymPro: planes de entrenamiento y formulario de inscripción.">
+  <title>Planes y horarios | Mi GymPro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Fuentes Poppins y Bebas Neue de Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome aporta los iconos de marca de WhatsApp y TikTok. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer">
+  <!-- Iconos Lucide. Se carga antes de main.js para generar los SVG. -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Icono de la pestaña del navegador. -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Carga las interacciones después de analizar el HTML mediante defer. -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body><a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <!-- Contacto y redes sociales compartidos por las cinco páginas. -->
+  <div class="barra-superior">
+    <div class="contenedor barra-superior-contenido">
+      <div class="barra-contacto">
+        <a href="mailto:contacto@migympro.example"><i data-lucide="mail" aria-hidden="true"></i>
+          <span>contacto@migympro.example</span></a>
+        <a class="barra-telefono" href="tel:+51987654321" aria-label="Llamar al +51 987 654 321"><i data-lucide="phone" aria-hidden="true"></i> <span>+51 987 654 321</span></a>
+      </div>
+      <!-- Enlaces a las redes sociales de UTP. -->
+      <div class="barra-redes">
+        <a href="https://www.instagram.com/universidadutp/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Instagram" title="UTP en Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+        <a href="https://bit.ly/ConversaUTP_WA" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de UTP" title="WhatsApp de UTP"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/UTP.Peru/" target="_blank" rel="noopener noreferrer" aria-label="UTP en Facebook" title="UTP en Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+        <a href="https://www.tiktok.com/@universidadutp" target="_blank" rel="noopener noreferrer" aria-label="UTP en TikTok" title="UTP en TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <header id="inicio">
+    <div class="encabezado">
+      <p class="marca"><a href="index.html" aria-label="Mi GymPro, inicio">MI <strong>GYMPRO</strong></a></p>
+      <!-- Botón hamburguesa con iconos de apertura y cierre. Se muestra hasta 992 px. -->
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false"
+        aria-label="Abrir menú"><i data-lucide="menu" class="icono-menu" aria-hidden="true"></i><i data-lucide="x" class="icono-cerrar" aria-hidden="true"></i> Menú</button>
+      <!-- Menú principal vinculado al botón hamburguesa. aria-current indica la página actual. -->
+      <nav id="menu-principal" class="nav-menu" aria-label="Navegación principal"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html" class="activo" aria-current="page">Planes y
+          horarios</a><a href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+    </div>
+    <!-- Cabecera con el título de la página y un enlace al inicio. -->
+    <div class="cabecera-interna">
+      <p class="etiqueta">MI GYMPRO</p>
+      <h1>Planes y horarios</h1>
+      <p><a href="index.html">Inicio</a> / Planes y horarios</p>
+    </div>
+  </header>
+  <!-- Contenido principal y destino del enlace accesible Saltar al contenido. -->
+  <main id="contenido">
+    <!-- Membresías con precios, beneficios y enlaces hacia el formulario de contacto. -->
+    <section id="planes" class="seccion">
+      <div class="titulo-seccion">
+        <p class="etiqueta">MEMBRESÍAS</p>
+        <h2>Elige el plan ideal para ti</h2>
+        <p>Todos los planes incluyen orientación durante tu primera visita.</p>
+      </div>
+
+      <div class="lista-planes">
+        <article class="plan">
+          <p class="numero-plan">01</p>
+          <h3>Plan Básico</h3>
+          <p class="descripcion-plan">Ideal para comenzar a entrenar con los equipos esenciales.</p>
+          <p class="precio"><strong>S/ 60</strong> al mes</p>
+          <div class="plan-beneficios">
+            <p><i data-lucide="dumbbell" aria-hidden="true"></i> Máquinas y zona de pesas</p>
+            <p><i data-lucide="check" aria-hidden="true"></i> Uso de vestidores</p>
+            <p><i data-lucide="clock" aria-hidden="true"></i> Horario de 9:00 a. m. a 5:00 p. m.</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Orientación durante la primera visita</p>
+          </div>
+          <p class="condicion-plan">Acceso a una sede.</p>
+          <a href="contacto.html">Seleccionar plan</a>
+        </article>
+
+        <article class="plan destacado">
+          <p class="numero-plan">02</p>
+          <p class="recomendado">MÁS ELEGIDO</p>
+          <h3>Plan Estándar</h3>
+          <p class="descripcion-plan">Una opción completa para entrenar con mayor variedad.</p>
+          <p class="precio"><strong>S/ 100</strong> al mes</p>
+          <div class="plan-beneficios">
+            <p><i data-lucide="dumbbell" aria-hidden="true"></i> Acceso a todas las zonas</p>
+            <p><i data-lucide="users" aria-hidden="true"></i> Clases grupales con instructor</p>
+            <p><i data-lucide="heart-pulse" aria-hidden="true"></i> Evaluación física mensual</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Rutina básica de entrenamiento</p>
+          </div>
+          <p class="condicion-plan">Acceso en todo el horario de atención.</p>
+          <a href="contacto.html">Seleccionar plan</a>
+        </article>
+
+        <article class="plan">
+          <p class="numero-plan">03</p>
+          <h3>Plan Premium</h3>
+          <p class="descripcion-plan">Mayor acompañamiento para avanzar hacia objetivos específicos.</p>
+          <p class="precio"><strong>S/ 160</strong> al mes</p>
+          <div class="plan-beneficios">
+            <p><i data-lucide="clock" aria-hidden="true"></i> Acceso en todo el horario</p>
+            <p><i data-lucide="users" aria-hidden="true"></i> Clases grupales con instructor</p>
+            <p><i data-lucide="activity" aria-hidden="true"></i> Rutina de entrenamiento personalizada</p>
+            <p><i data-lucide="heart-pulse" aria-hidden="true"></i> Seguimiento físico mensual</p>
+          </div>
+          <p class="condicion-plan">Incluye una orientación personal al mes.</p>
+          <a href="contacto.html">Seleccionar plan</a>
+        </article>
+      </div>
+    </section>
+    <!-- Horarios organizados en una tabla para revisar días y horas de atención. -->
+    <section id="horarios" class="seccion">
+      <div class="titulo-seccion">
+        <p class="etiqueta">HORARIOS</p>
+        <h2>Organiza tu entrenamiento</h2>
+        <p>Consulta nuestros horarios de atención y elige el momento que mejor se adapte a tu rutina.</p>
+      </div>
+
+      <!-- Tabla semántica con cabecera y cuerpo de horarios -->
+      <div class="tabla-contenedor" role="region" aria-label="Horarios semanales" tabindex="0">
+        <table>
+          <caption>Horario de atención y actividades por día</caption>
+          <thead>
+            <tr>
+              <th scope="col">Días</th>
+              <th scope="col">Apertura</th>
+              <th scope="col">Cierre</th>
+              <th scope="col">Servicios disponibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Lunes</th>
+              <td>6:00 a. m.</td>
+              <td>10:00 p. m.</td>
+              <td>Máquinas y entrenamiento funcional</td>
+            </tr>
+            <tr>
+              <th scope="row">Martes</th>
+              <td>6:00 a. m.</td>
+              <td>10:00 p. m.</td>
+              <td>Máquinas y spinning</td>
+            </tr>
+            <tr>
+              <th scope="row">Miércoles</th>
+              <td>6:00 a. m.</td>
+              <td>10:00 p. m.</td>
+              <td>Máquinas y entrenamiento funcional</td>
+            </tr>
+            <tr>
+              <th scope="row">Jueves</th>
+              <td>6:00 a. m.</td>
+              <td>10:00 p. m.</td>
+              <td>Máquinas y spinning</td>
+            </tr>
+            <tr>
+              <th scope="row">Viernes</th>
+              <td>6:00 a. m.</td>
+              <td>10:00 p. m.</td>
+              <td>Máquinas y clases grupales</td>
+            </tr>
+            <tr>
+              <th scope="row">Sábado</th>
+              <td>7:00 a. m.</td>
+              <td>8:00 p. m.</td>
+              <td>Máquinas y clases grupales</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- Pie compartido con navegación secundaria y datos de contacto. -->
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div class="footer-marca">
+        <h2>Mi GymPro</h2>
+        <p>Entrena con propósito.</p>
+        <p>Gimnasio · Lima, Perú</p>
+      </div>
+      <nav class="footer-enlaces" aria-label="Navegación del pie"><a href="index.html">Inicio</a><a
+          href="nosotros.html">Nosotros</a><a href="planes.html">Planes y horarios</a><a
+          href="galeria.html">Galería</a><a href="contacto.html">Contacto</a></nav>
+      <div class="footer-contacto">
+        <p><a href="tel:+51987654321">987 654 321</a></p>
+        <p><a href="mailto:contacto@migympro.example">contacto@migympro.example</a></p>
+        <p>Lunes a viernes: 6:00 a. m. a 10:00 p. m.<br>Sábado: 7:00 a. m. a 8:00 p. m.</p>
+      </div>
+    </div>
+    <p>© 2026 Mi GymPro. Todos los derechos reservados.</p>
+  </footer>
+  <!-- main.js muestra este botón después de desplazarse más de 300 píxeles. -->
+  <button class="scroll-up" type="button" aria-label="Volver al inicio" hidden><i data-lucide="chevron-up" aria-hidden="true"></i></button>
+</body>
+
+</html>
